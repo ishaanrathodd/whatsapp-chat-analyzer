@@ -4,4 +4,3 @@ seaborn
 wordcloud
 pandas
 emoji
-collections
