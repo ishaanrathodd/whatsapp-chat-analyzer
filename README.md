@@ -2,6 +2,8 @@
 
 WhatsApp Chat Analyzer is a Python-based web application built with Streamlit that allows users to analyze and visualize statistics from their WhatsApp chat data. The application processes the WhatsApp chat data, extracts meaningful insights, and presents them in an interactive dashboard format.
 
+Demo: https://wa-chat-analyzer.streamlit.app/
+
 # Features
 
 1. Upload Chat Data: Users can upload their WhatsApp chat .txt file directly to the application.
