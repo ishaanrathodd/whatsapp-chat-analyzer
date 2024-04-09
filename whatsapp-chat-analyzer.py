@@ -5,7 +5,7 @@ import helper
 import preprocesser
 
 st.title("Whatsapp Chat Analyzer")
-st.write("⚠️   Export your WhatsApp chat from either an iPhone or an Android device to ensure accurate data presentation. For iPhone, uncompress the ZIP file and upload the resulting text file")
+st.write("⚠️   Export your WhatsApp chat from either an iPhone or an Android device to ensure accurate data presentation. For iPhone, uncompress the ZIP file and upload the "_chat.txt" file.")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
