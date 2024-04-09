@@ -53,13 +53,15 @@ def preprocess_p1(data):
 
     df['period'] = period
 
-    # Identify users who have sent the target message
-    target_message = "messages and calls are end-to-end encrypted. no one outside of this chat not even whatsapp can read or listen to them."
-    group_name = df[df['message'].str.contains(target_message, case=False)]['user']
+    unique_users_count = df['user'].nunique()
 
-    # Remove identified user from the DataFrame
-    media_df = df[~df['user'].isin(group_name)]
-    media_df = media_df[media_df['message'] != 'null']
+    if unique_users_count > 2:
+        target_message = "messages and calls are end-to-end encrypted. no one outside of this chat not even whatsapp can read or listen to them."
+        group_name = df[df['message'].str.contains(target_message, case=False)]['user']
+        media_df = df[~df['user'].isin(group_name)]
+        media_df = media_df[media_df['message'] != 'null']
+    else:
+        media_df = df[df['message'] != 'null']
 
     return media_df
 
