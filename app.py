@@ -4,7 +4,8 @@ import streamlit as st
 import helper
 import preprocesser
 
-st.sidebar.title("Whatsapp Chat Analyzer")
+st.title("Whatsapp Chat Analyzer")
+st.write("⚠️  Export your WhatsApp chat from either an iPhone or an Android device to ensure accurate data presentation.")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
