@@ -81,7 +81,6 @@ if uploaded_file is not None:
             emoji_df = helper.most_common_emojis(selected_user, non_media_df)
             if not emoji_df.empty:
                 st.title("Emoji Analysis")
-                # emoji_df = helper.most_common_emojis(selected_user, non_media_df)
                 col1, col2 = st.columns(2)
                 with col1:
                     fig, ax = plt.subplots()
@@ -214,7 +213,6 @@ if uploaded_file is not None:
             emoji_df = helper.most_common_emojis(selected_user, non_media_df)
             if not emoji_df.empty:
                 st.title("Emoji Analysis")
-                # emoji_df = helper.most_common_emojis(selected_user, non_media_df)
                 col1, col2 = st.columns(2)
                 with col1:
                     fig, ax = plt.subplots()
