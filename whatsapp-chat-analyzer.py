@@ -78,16 +78,17 @@ if uploaded_file is not None:
                 st.dataframe(most_common_words_df, height=290, width=500)
 
             # Most Common Emojis
-            st.title("Emoji Analysis")
             emoji_df = helper.most_common_emojis(selected_user, non_media_df)
-
-            col1, col2 = st.columns(2)
-            with col1:
-                fig, ax = plt.subplots()
-                ax.bar(emoji_df[0].head(), emoji_df[1].head())
-                st.pyplot(fig)
-            with col2:
-                st.dataframe(emoji_df, height=260, width=500)
+            if not emoji_df.empty:
+                st.title("Emoji Analysis")
+                # emoji_df = helper.most_common_emojis(selected_user, non_media_df)
+                col1, col2 = st.columns(2)
+                with col1:
+                    fig, ax = plt.subplots()
+                    ax.bar(emoji_df[0].head(), emoji_df[1].head())
+                    st.pyplot(fig)
+                with col2:
+                    st.dataframe(emoji_df, height=260, width=500)
 
             # Timeline
             st.title("Timeline")
@@ -210,16 +211,17 @@ if uploaded_file is not None:
                 st.dataframe(most_common_words_df, height=290, width=500)
 
             # Most Common Emojis
-            st.title("Emoji Analysis")
             emoji_df = helper.most_common_emojis(selected_user, non_media_df)
-
-            col1, col2 = st.columns(2)
-            with col1:
-                fig, ax = plt.subplots()
-                ax.bar(emoji_df[0].head(), emoji_df[1].head())
-                st.pyplot(fig)
-            with col2:
-                st.dataframe(emoji_df, height=260, width=500)
+            if not emoji_df.empty:
+                st.title("Emoji Analysis")
+                # emoji_df = helper.most_common_emojis(selected_user, non_media_df)
+                col1, col2 = st.columns(2)
+                with col1:
+                    fig, ax = plt.subplots()
+                    ax.bar(emoji_df[0].head(), emoji_df[1].head())
+                    st.pyplot(fig)
+                with col2:
+                    st.dataframe(emoji_df, height=260, width=500)
 
             # Timeline
             st.title("Timeline")
